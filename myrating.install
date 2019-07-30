@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the myrating module.
+ */
+
+use Drupal\block_content\Entity\BlockContent;
+
+/**
+ * Implements hook_install().
+ */
+function myrating_install() {
+  if (!\Drupal::service('config.installer')->isSyncing()) {
+    $block = BlockContent::create([
+      'type' => 'myrating',
+      'info' => 'Рейтинг сайта',
+    ]);
+    $block->save();
+  }
+}
+

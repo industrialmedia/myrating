@@ -1,0 +1,1 @@
+vote_message: "<div itemprop=\"aggregateRating\" itemscope itemtype=\"http://schema.org/AggregateRating\">\r\n  <span itemprop=\"itemReviewed\">Название сайта</span>.  \r\n   Общий рейтинг: <span itemprop=\"ratingValue\">[ratingValue]</span>/<span itemprop=\"bestRating\">[bestRating]</span> \r\n   на основе <span itemprop=\"reviewCount\">[reviewCount]</span> человек.\r\n</div>"

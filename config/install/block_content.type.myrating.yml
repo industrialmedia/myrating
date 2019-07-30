@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+id: myrating
+label: Рейтинг
+revision: 0
+description: ''

@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Module file for myrating.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\block_content\Entity\BlockContent;
+
+/**
+ * Implements hook_form_alter().
+ */
+function myrating_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  if (substr($form_id, 0, strlen('fivestar_form_')) === 'fivestar_form_') {
+    $form['#attached']['library'][] = 'myrating/myrating';
+    $build_info = $form_state->getBuildInfo();
+    if (isset($build_info['args'][0]['entity'])) {
+      $entity = $build_info['args'][0]['entity'];
+      if ($entity instanceof BlockContent) {
+        if ($entity->hasField('field_myrating_rating') && isset($form['vote']['#values'])) {
+          $form['#attributes']['class'][] = 'myrating-form';
+          $bestRating = $form['vote']['#stars'];
+          $ratingValue = $bestRating * $form['vote']['#values']['vote_average'] / 100;
+          $ratingValue = round($ratingValue, 1);
+          $reviewCount = $form['vote']['#values']['vote_count'];
+          $config = \Drupal::config('myrating.settings');
+          $vote_message = $config->get('vote_message');
+          $vote_message = str_replace(['[bestRating]', '[ratingValue]', '[reviewCount]'], [$bestRating, $ratingValue, $reviewCount], $vote_message);
+          $form['vote_message'] = [
+            '#type' => 'markup',
+            '#markup' => '<div class="vote-message">' . $vote_message . '</div>',
+          ];
+        }
+      }
+    }
+  }
+}

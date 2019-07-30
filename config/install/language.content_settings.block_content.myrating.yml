@@ -1,0 +1,10 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.myrating
+id: block_content.myrating
+target_entity_type_id: block_content
+target_bundle: myrating
+default_langcode: site_default
+language_alterable: false

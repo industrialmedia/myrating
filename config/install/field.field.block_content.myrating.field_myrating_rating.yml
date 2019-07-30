@@ -1,0 +1,31 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.myrating
+    - field.storage.block_content.field_myrating_rating
+  module:
+    - fivestar
+id: block_content.myrating.field_myrating_rating
+field_name: field_myrating_rating
+entity_type: block_content
+bundle: myrating
+label: Рейтинг
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    rating: '100'
+    target: null
+default_value_callback: ''
+settings:
+  stars: '5'
+  allow_clear: 0
+  allow_revote: 1
+  allow_ownvote: 1
+  rated_while: viewing
+  enable_voting_target: 0
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

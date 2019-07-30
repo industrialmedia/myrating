@@ -1,0 +1,16 @@
+name: myrating
+type: module
+description: My rating.
+package: AAMID
+type: module
+core: 8.x
+version: 1.0
+dependencies:
+ - fivestar
+
+
+
+
+
+
+

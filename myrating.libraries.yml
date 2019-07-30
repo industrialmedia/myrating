@@ -1,0 +1,10 @@
+myrating:
+  version: VERSION
+  css:
+    theme:
+      css/myrating.css: {}
+
+
+
+
+

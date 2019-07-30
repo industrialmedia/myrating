@@ -1,0 +1,14 @@
+myrating.admin.settings:
+  path: '/admin/seo/myrating/settings'
+  defaults:
+    _title: 'Настройки рейтинга сайта'
+    _form: 'Drupal\myrating\Form\MyratingSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+
+
+
+
+

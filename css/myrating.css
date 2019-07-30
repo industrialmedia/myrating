@@ -1,0 +1,7 @@
+.myrating-form .form-item-vote .description {
+  display: none;
+}
+
+.myrating-form .chosen-container {
+  display: none !important;
+}

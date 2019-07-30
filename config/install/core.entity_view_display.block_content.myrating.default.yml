@@ -1,0 +1,37 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.myrating
+    - field.field.block_content.myrating.field_myrating_rating
+  module:
+    - ds
+    - fivestar
+id: block_content.myrating.default
+targetEntityType: block_content
+bundle: myrating
+mode: default
+content:
+  field_myrating_rating:
+    weight: 1
+    label: hidden
+    settings:
+      fivestar_widget: modules/contrib/fivestar/widgets/basic/basic.css
+      display_format: average
+      text_format: average
+    third_party_settings:
+      ds:
+        ft:
+          id: myapi_minimal
+          settings:
+            lb: ''
+            field_attributes: ''
+            field_prefix: ''
+            field_suffix: ''
+            lb-col: 0
+            classes: {  }
+    type: fivestar_stars
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
