@@ -7,28 +7,20 @@
 
 
       //========================================================================
-      // [[ BEGIN ]] Fix star submit form - Отключил, уже работает
+      // [[ BEGIN ]] Fix star submit form
       //========================================================================
-      /*
       $('form[class^="fivestar-form-"]', context).once('myrating').each(function () {
-        $(this).find('select').change(function(){
-
-          alert(5);
-
+        var $form = $(this);
+        $form.find('select').change(function () {
+          $form.find('input[type="submit"]').click();
         });
       });
-      */
       // [[ END ]]
       //========================================================================
 
 
     }
   };
-
-
-
-
-
 
 
 })(jQuery, window, Drupal, drupalSettings);

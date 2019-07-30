@@ -3,7 +3,12 @@ myrating:
   css:
     theme:
       css/myrating.css: {}
-
+  js:
+    js/myrating.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
 
 
 
