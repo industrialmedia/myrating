@@ -2,7 +2,7 @@ myrating.admin.settings:
   title: 'Рейтинг сайта'
   description: 'Настройки рейтинга сайта'
   route_name: myrating.admin.settings
-  parent: myapi.seo
+  parent: myseo
   weight: 90
 
 
