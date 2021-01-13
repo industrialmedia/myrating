@@ -1,0 +1,4 @@
+myrating.admin.settings:
+  route_name: myrating.admin.settings
+  title: Settings
+  base_route: myrating.admin.settings

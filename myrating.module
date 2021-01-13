@@ -36,3 +36,5 @@ function myrating_form_alter(&$form, FormStateInterface &$form_state, $form_id) 
     }
   }
 }
+
+
