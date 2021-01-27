@@ -6,6 +6,13 @@ myrating.admin.settings:
   requirements:
     _permission: 'administer site configuration'
 
+myrating.admin.generate_votes:
+  path: '/admin/seo/myrating/settings/generate-votes'
+  defaults:
+    _title: 'Генерировать голоса'
+    _form: 'Drupal\myrating\Form\MyratingGenerateVotesForm'
+  requirements:
+    _permission: 'administer site configuration'
 
 
 

@@ -2,3 +2,9 @@ myrating.admin.settings:
   route_name: myrating.admin.settings
   title: Settings
   base_route: myrating.admin.settings
+
+myrating.admin.generate_votes:
+  route_name: myrating.admin.generate_votes
+  title: 'Генерировать голоса'
+  base_route: myrating.admin.settings
+  weight: 100
